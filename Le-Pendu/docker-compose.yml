@@ -1,0 +1,23 @@
+version: "3"
+services:
+  app:
+    build: .
+    ports:
+      - 8000:80
+  mongo:
+    container_name: mongo-container
+    image: mongo
+  sonarqube:
+    container_name: sonarqube-container
+    image: sonarqube
+    ports:
+      - 9000:9000
+  sonarscanner:
+    container_name: sonnarscanner-container
+    image: sonarsource/sonar-scanner-cli
+    environment:
+      - SONAR_HOST_URL=http://sonarqube:9000/
+      - SONAR_SCANNER_OPTS=-Dsonar.projectKey=pendu-app
+      - SONAR_TOKEN=sqa_555bdd046012ab1d9893fe11effbffc6fd65f7f1
+    volumes:
+      - "./:/usr/src"

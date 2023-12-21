@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Pendu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="pendu.css">
+</head>
+
+<body>
+    <div class="row">
+        <!-- colonne de gauche Mode d'emploi -->
+        <div class="col-3">
+            <button id="explications">afficher le mode d'emploi</button>
+            
+            <fieldset id="texteExplications" class="explications">
+                <legend class="explications">Mode d'emploi</legend>
+                <p>
+                    Pour deviner le mot inconnue ...
+                    <br> ... clic sur les lettres !
+                    <br> Vous serez Pendu à la 6ème erreur
+                </p>
+            </fieldset>
+            
+            <button id="newGame">relancer une partie ?</button>
+        </div>
+        <!-- colonne de droite affichage du jeu -->
+        <div class="col-9">
+            <div class="row">
+                <!-- titre -->
+                <div class="col-12">Le jeu du Pendu</div>
+                <div class="col-2"><img class="img-fluid" src="img/corde0.gif" alt=""></div>
+                <div class="col-8"><img id="echafaud" class="img-fluid" src="img/p0.gif" alt=""></div>
+                <div class="col-2"><img class="img-fluid" src="img/corde0.gif" alt=""></div>
+                <div id="motMystere" class="col-12"></div>
+                <div id="lettresAlphabet" class="col-12"></div>
+                <div id="infoDico" class="col-12">Mon dictionnaire contient 1600 mots</div>
+                <div id="infosJeu" class="col-12">
+                    Les lettres jouées sont : <span id="lettresJouees"></span>
+                    <br>
+                    il vous reste <span id="tours"></span> tour(s) pour trouver
+                </div>
+                <div id="solution" class="col-12">
+                    la réponse était : <span id="motSolution"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/alphabet.js"></script>
+    <script src="js/comparaison.js"></script>
+    <script src="js/Dico.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/pendu.js"></script>
+</body>
+
+</html>

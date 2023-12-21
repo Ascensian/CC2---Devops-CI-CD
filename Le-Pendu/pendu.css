@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    background-color: yellow;
+}
+
+fieldset.explications{
+    display: none;
+    border: 3px solid black !important;
+}
+
+legend.explications{
+    font-weight: bolder;
+}
+
+#lettresAlphabet {
+    width: 690px;
+}
+
+#motMystere{
+    letter-spacing: 15px;
+}
+
+.boutonLettre {
+    display: inline-block;
+    border: 1px solid black;
+    background-color: lightgray;
+    width: 50px;
+}
+.boutonLettre:hover{
+    cursor: pointer;
+}
+
+#infosJeu{
+    display: none;
+}
+
+#solution{
+    display: none;
+}
